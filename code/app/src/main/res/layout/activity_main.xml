@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
@@ -19,6 +20,44 @@
             android:textAppearance="?attr/textAppearanceHeadline6" />
 
     </com.google.android.material.appbar.MaterialToolbar>
+
+    <!--    Btns-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+
+        >
+
+        <Button
+            android:id="@+id/delete_city_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/btn_color"
+            android:text="DELETE CITY" />
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/add_city_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/btn_color"
+            android:text="ADD CITY" />
+        <!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--                android:id="@+id/add_city_button"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:clickable="true"-->
+        <!--                android:background="@color/btn_color"-->
+        <!--                app:srcCompat="@android:drawable/ic_menu_add" />-->
+    </LinearLayout>
 
     <ListView
         android:id="@+id/city_list"
