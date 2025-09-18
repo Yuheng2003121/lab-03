@@ -19,10 +19,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.listycitylab3.adapter.CityAdapter;
 import com.example.listycitylab3.bean.City;
-import com.example.listycitylab3.AddCityFragment;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements AddCityFragment.AddCityDialogListener{
@@ -32,9 +30,9 @@ public class MainActivity extends AppCompatActivity implements AddCityFragment.A
     CityAdapter cityAdapter;
     List<City> dataList;
 
-    Button addCityButton, deleteCityButton;
-    EditText cityInput;
-    LinearLayout inputContainer;
+    Button deleteCityButton;
+    FloatingActionButton addCityButton;
+
 
     int selectedPosition = -1;
 
@@ -110,22 +108,6 @@ public class MainActivity extends AppCompatActivity implements AddCityFragment.A
             Toast.makeText(this, "Deleted: " + deletedCity, Toast.LENGTH_SHORT).show();
         });
 
-        //CONFIRM Button
-//        confirmButton.setOnClickListener(v -> {
-//            String cityName = cityInput.getText().toString().trim();
-//            if (cityName.isEmpty()) {
-//                Toast.makeText(this, "City name cannot be empty", Toast.LENGTH_SHORT).show();
-//                return;
-//            }
-//
-//            City newCity = new City(cityName, "AB");
-//
-////            dataList.add(cityName);
-//            dataList.add(newCity);
-//            cityAdapter.notifyDataSetChanged();
-//            inputContainer.setVisibility(View.GONE);
-//            Toast.makeText(this, "Added: " + cityName, Toast.LENGTH_SHORT).show();
-//        });
     }
 
     private void setupListView() {
