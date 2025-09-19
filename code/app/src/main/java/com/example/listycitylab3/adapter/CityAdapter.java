@@ -18,37 +18,10 @@ public class CityAdapter extends ArrayAdapter<City> {
 
 
     public CityAdapter(Context context, List<City> cityList) {
-//        this.context = context;
-//        this.cityList = cityList;
+
         super(context, 0, cityList);
     }
 
-//    public Context getContext() {
-//        return context;
-//    }
-
-//    public List<City> getCityList() {
-//        return cityList;
-//    }
-
-//    public void add(City newCity){
-//        this.cityList.add(newCity);
-//    }
-//
-//    @Override
-//    public int getCount() {
-//        return cityList != null ? cityList.size() : 0;
-//    }
-//
-//    @Override
-//    public City getItem(int position) {
-//        return this.cityList.get(position);
-//    }
-//
-//    @Override
-//    public long getItemId(int position) {
-//        return position;
-//    }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
